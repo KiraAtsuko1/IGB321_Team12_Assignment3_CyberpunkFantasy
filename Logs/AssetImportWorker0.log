@@ -170,3 +170,4 @@ Received Import Request.
   path: Assets/Assets/Scenes/Level3Final.unity
   artifactKey: Guid(2956e8fc0bb32934bafb9a41310c3c07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Assets/Scenes/Level3Final.unity using Guid(2956e8fc0bb32934bafb9a41310c3c07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc5741829c61a3c33bbebe42e18c4ae8') in 0.005352 seconds 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
