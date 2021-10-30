@@ -7,7 +7,7 @@ public class TransparentbuildingExit : MonoBehaviour
     public GameObject transparentObject;
 
     [SerializeField]
-    private GameObject enterTrigger;
+    private GameObject[] enterTrigger, exitTrigger;
 
     public IEnumerator fadeObject(GameObject objToFade)
     {
@@ -29,8 +29,14 @@ public class TransparentbuildingExit : MonoBehaviour
     public IEnumerator waitForTrigger()
     {
         yield return new WaitForSeconds(0.5f);
-        this.gameObject.SetActive(false);
-        enterTrigger.SetActive(true);
+        foreach (GameObject trigger in exitTrigger)
+        {
+            trigger.SetActive(false);
+        }
+        foreach (GameObject trigger in enterTrigger)
+        {
+            trigger.SetActive(true);
+        }
     }
 
     private void OnTriggerExit(Collider other)
