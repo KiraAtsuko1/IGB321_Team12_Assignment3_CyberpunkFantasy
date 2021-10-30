@@ -5,6 +5,7 @@ using UnityEngine;
 public class TransparentBuildingEvent : MonoBehaviour
 {
     public GameObject transparentObject;
+    public GameObject[] additionalObjects;
 
     [SerializeField]
     private GameObject[] exitTrigger,enterTrigger;
@@ -24,6 +25,11 @@ public class TransparentBuildingEvent : MonoBehaviour
         }
         yield return new WaitUntil(() => meshRenderer.materials[0].color.a <= 0f);
         Debug.Log("Faded");
+
+        foreach(GameObject addObject in additionalObjects)
+        {
+            addObject.SetActive(false);
+        }
     }
 
     public IEnumerator waitForTrigger()
