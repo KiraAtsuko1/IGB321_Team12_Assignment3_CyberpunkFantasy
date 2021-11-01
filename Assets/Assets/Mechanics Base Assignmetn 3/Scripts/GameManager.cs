@@ -15,7 +15,6 @@ public class GameManager : MonoBehaviour {
     string thisLevel;
     public string nextLevel;
 
-
     // Awake Checks - Singleton setup
     void Awake() {
 
@@ -37,7 +36,8 @@ public class GameManager : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+    {
 		
 	}
 
